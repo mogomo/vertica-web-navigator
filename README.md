@@ -82,26 +82,26 @@ pip install pyodbc
 On Ubuntu 24.04 and other Debian-based Linux systems, the default `python3` installation is managed by the operating system, 
 so installing Python packages directly into the system Python with `pip` may be blocked or may risk breaking OS-managed packages. 
 For this project, it is recommended to run the application as the Linux user `dbadmin` and use a dedicated Python virtual environment 
-so that all required packages remain isolated from the operating system. 
-As user `dbadmin`, create the environment once with: `python3 -m venv ~/venvs/vertica`
-Activate it with: `source ~/venvs/vertica/bin/activate`, 
-Upgrade `pip` with: `python -m pip install --upgrade pip`, 
-and then install the required packages with: `python -m pip install verticapy vertica-python pyodbc`. 
-If needed, first install the required system packages with: `sudo apt update && sudo apt install python3-venv python3-full python3-pip unixodbc-dev`. 
+so that all required packages remain isolated from the operating system.   
+As user `dbadmin`, create the environment once with: `python3 -m venv ~/venvs/vertica`  
+Activate it with: `source ~/venvs/vertica/bin/activate`,   
+Upgrade `pip` with: `python -m pip install --upgrade pip`,  
+and then install the required packages with: `python -m pip install verticapy vertica-python pyodbc`   
+If needed, first install the required system packages with: `sudo apt update && sudo apt install python3-venv python3-full python3-pip unixodbc-dev`   
 
-Each time you want to run the application, activate the same virtual environment first with:
-`source ~/venvs/vertica/bin/activate` 
-and then start the program with `python 19_vertica_navigator.py`
+Each time you want to run the application, activate the same virtual environment first with:  
+`source ~/venvs/vertica/bin/activate`   
+and then start the program with `python 19_vertica_navigator.py`  
 
-When you are finished, leave the virtual environment by running: `deactivate`. 
-As an alternative, you can run the script without activating the environment by calling the virtual environment interpreter directly: 
-`~/venvs/vertica/bin/python 19_vertica_navigator.py`. 
+When you are finished, leave the virtual environment by running: `deactivate`   
+As an alternative, you can run the script without activating the environment by calling the virtual environment interpreter directly:   
+`~/venvs/vertica/bin/python 19_vertica_navigator.py`.  
 
-If you want to run the script as `./19_vertica_navigator.py`, add a shebang line such as `#!/usr/bin/env python3` as the first line of the file, 
-make it executable with: `chmod +x 19_vertica_navigator.py`, 
-And then run it either after activating the virtual environment or by updating the shebang to point to the virtual environment interpreter, 
-for example `#!/home/dbadmin/venvs/vertica/bin/python`. 
-So, if you prefer to run it with `./19_vertica_navigator.py`, make sure the virtual environment is activated first so the script can find the required Python packages.
+If you want to run the script as `./19_vertica_navigator.py`, add a shebang line such as `#!/usr/bin/env python3` as the first line of the file,   
+make it executable with: `chmod +x 19_vertica_navigator.py`,   
+And then run it either after activating the virtual environment or by updating the shebang to point to the virtual environment interpreter,   
+for example `#!/home/dbadmin/venvs/vertica/bin/python`   
+So, if you prefer to run it with `./19_vertica_navigator.py`, make sure the virtual environment is activated first so the script can find the required Python packages.  
 
 ---
 
