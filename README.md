@@ -102,6 +102,8 @@ make it executable with: `chmod +x 19_vertica_navigator.py`,
 And then run it either after activating the virtual environment or by updating the shebang to point to the virtual environment interpreter,   
 for example `#!/home/dbadmin/venvs/vertica/bin/python`   
 So, if you prefer to run it with `./19_vertica_navigator.py`, make sure the virtual environment is activated first so the script can find the required Python packages.  
+To be clear: if the first line of the script is changed to `#!/home/dbadmin/venvs/vertica/bin/python`  
+then activating the virtual environment is not required before running `./19_vertica_navigator.py`  
 
 ---
 
