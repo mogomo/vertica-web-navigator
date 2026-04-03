@@ -67,7 +67,7 @@ Use Python 3.
 
 ### Python packages and system package
 
-The script itself includes setup notes that indicate the following installation steps:[^code]
+The script itself includes setup notes that indicate the following installation steps:
 
 ```bash
 sudo apt install python3-pip
@@ -145,7 +145,7 @@ Run the script as the relevant user, for example:
 python3 19_vertica_navigator.py
 ```
 
-The script starts a local web server on port `8001`.[^code]
+The script starts a local web server on port `8001`.
 
 ---
 
@@ -183,7 +183,7 @@ From the attached script, the application:
 - loads the database tree from `/api/dbtree`
 - executes SQL through `/api/execute_query`
 - beautifies SQL through `/api/beautify_sql`
-- serves static assets from `/ASSETS/...`[^code]
+- serves static assets from `/ASSETS/...`
 
 ---
 
