@@ -2,7 +2,7 @@
 
 A lightweight Python web application for browsing a Vertica database structure and running SQL queries from a web browser.
 
-This repository is centered around the script `19_vertica_navigator.py`, which starts a local HTTP server, connects to Vertica, displays schemas/tables/views in a tree, and lets the user execute SQL queries from the browser. The script reads credentials from a local JSON file and serves a logo image from the `ASSETS` folder. Based on the code, the application uses port `8001`, expects a credentials file at `ASSETS/vertica_credentials.json`, and serves the logo from `ASSETS/verticalogo.png`.[^code]
+This repository is centered around the script `19_vertica_navigator.py`, which starts a local HTTP server, connects to Vertica, displays schemas/tables/views in a tree, and lets the user execute SQL queries from the browser. The script reads credentials from a local JSON file and serves a logo image from the `ASSETS` folder. Based on the code, the application uses port `8001`, expects a credentials file at `ASSETS/vertica_credentials.json`, and serves the logo from `ASSETS/verticalogo.png`.
 
 ---
 
