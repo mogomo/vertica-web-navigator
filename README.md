@@ -40,7 +40,7 @@ Your GitHub repository should look like this:
 ├── .gitignore
 └── ASSETS/
     ├── verticalogo.png
-    └── vertica_credentials.sample.json
+    └── vertica_credentials.json
 ```
 
 ## Important asset location
@@ -87,12 +87,11 @@ The application reads database credentials from:
 ASSETS/vertica_credentials.json
 ```
 
-You should **not** commit your real credentials file to GitHub.
-
-Instead, publish only a sample file such as:
+We did not provide a real credentials file.
+Instead, you need to edit and update the following file:
 
 ```text
-ASSETS/vertica_credentials.sample.json
+ASSETS/vertica_credentials.json
 ```
 
 ### Sample credentials file
@@ -129,7 +128,7 @@ For security reasons, the real server address is not written in the public sampl
 1. Copy the sample file:
 
 ```bash
-cp ASSETS/vertica_credentials.sample.json ASSETS/vertica_credentials.json
+cp vertica_credentials.json ASSETS/vertica_credentials.json
 ```
 
 2. Edit `ASSETS/vertica_credentials.json` and replace the placeholder values with the real Vertica connection details.
@@ -152,7 +151,7 @@ The script starts a local web server on port `8001`.[^code]
 
 ## How to open the application in the browser
 
-After the server starts, open a browser and go to the machine IP address with port `8001`.
+After the server starts, open a browser (like Chrom) and go to the machine IP address with port `8001`.
 
 Example:
 
@@ -194,97 +193,8 @@ From the attached script, the application:
 - Keep `ASSETS/vertica_credentials.json` out of GitHub.
 - Publish only the sample credentials file.
 - Review access controls before exposing the server to any network.
+- This application starts a Python-based web server that communicates with the browser over HTTP. The connection is not encrypted. Do not use it over untrusted networks. For safer use, run it only on localhost or within a trusted private network environment.
 - This tool can execute SQL statements, so use it carefully and only in environments where you accept that risk.
 
 ---
 
-## Suggested `.gitignore`
-
-Use a `.gitignore` file such as:
-
-```gitignore
-__pycache__/
-*.pyc
-*.pyo
-*.log
-ASSETS/vertica_credentials.json
-.env
-.venv/
-venv/
-```
-
----
-
-## GitHub publication instructions
-
-### 1. Prepare the repository contents
-
-Make sure these files are present:
-
-- `19_vertica_navigator.py`
-- `README.md`
-- `LICENSE`
-- `.gitignore`
-- `ASSETS/verticalogo.png`
-- `ASSETS/vertica_credentials.sample.json`
-
-### 2. Add MIT License
-
-Create a file named `LICENSE` and place the MIT License text in it.
-
-### 3. Rename this README if needed
-
-If you downloaded this regenerated file as `README_regenerated.md`, rename it to:
-
-```text
-README.md
-```
-
-before uploading to GitHub.
-
-### 4. Initialize git
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-### 5. Create a GitHub repository and push
-
-```bash
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-git push -u origin main
-```
-
----
-
-## Recommended publish checklist
-
-- Confirm `ASSETS/verticalogo.png` exists in the exact path.
-- Confirm `ASSETS/vertica_credentials.json` is **not** committed.
-- Confirm `ASSETS/vertica_credentials.sample.json` is included.
-- Confirm the disclaimer remains in the README.
-- Confirm the MIT `LICENSE` file is included.
-
----
-
-## Notes for users
-
-- Replace the credentials sample placeholders with real values.
-- The sample IP `127.0.0.1` is not mandatory and is only an example.
-- Use `hostname -I` to discover the IP address to open in the browser.
-- Example browser URL:
-
-```text
-http://10.10.10.3:8001
-```
-
----
-
-## Source basis
-
-This README is based on the attached `19_vertica_navigator.py` file, including the documented setup commands, credentials path, asset path, HTTP endpoints, and server port.[^code]
-
-[^code]: Based on `19_vertica_navigator.py` provided in this conversation.
