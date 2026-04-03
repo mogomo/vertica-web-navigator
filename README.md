@@ -27,6 +27,11 @@ The application provides:
 - local logging to `vertica_navigator.log`
 
 ---
+<img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/dac889f1-d860-4e5a-81c4-256f8724f619" />
+
+
+<img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/2a8c726d-a696-480e-ba20-f292a84362d1" />
+
 
 ## Repository layout
 
