@@ -30,7 +30,7 @@ The application provides:
 <img width="1726" height="1071" alt="image" src="https://github.com/user-attachments/assets/df56e34f-4944-41be-aaf0-b7258b36ae0f" />
 
 
-<img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/2a8c726d-a696-480e-ba20-f292a84362d1" />
+<img width="2038" height="1163" alt="image" src="https://github.com/user-attachments/assets/e76b7030-8349-4dfb-87b9-dfe2d1d39939" />
 
 
 ## Repository layout
